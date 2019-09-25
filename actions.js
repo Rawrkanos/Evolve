@@ -4625,8 +4625,8 @@ export const actions = {
             cost: { 
                 Knowledge(){ return 615000; },
                 Infernite(){ return 2000; },
-                Soul_Gem(){ return 2; }
-            },
+                
+           },
             effect: loc('tech_hellfire_furnace_effect'),
             action(){
                 if (payCosts($(this)[0].cost)){
@@ -5989,7 +5989,6 @@ export const actions = {
             cost: {
                 Knowledge(){ return 850000; },
                 Neutronium(){ return 7500; },
-                Soul_Gem(){ return 2; }
             },
             effect(){ return loc('tech_quantum_entanglement_effect',[2]); },
             action(){
@@ -6373,7 +6372,6 @@ export const actions = {
             cost: {
                 Knowledge(){ return 600000; },
                 Stanene(){ return 1250 },
-                Soul_Gem(){ return 1 }
             },
             effect: loc('tech_virtual_reality_effect'),
             action(){
@@ -9457,12 +9455,10 @@ export const actions = {
             grant: ['whitehole',2],
             cost: {
                 Knowledge(){ return 1500000; },
-                Soul_Gem(){ return 10; }
             },
             effect(){ return `<div>${loc('tech_exotic_infusion_effect')}</div><div class="has-text-danger">${loc('tech_exotic_infusion_effect2')}</div>`; },
             action(){
                 if (payCosts($(this)[0].cost)){
-                    global.resource.Soul_Gem.amount += 10;
                     global.resource.Knowledge.amount += 1500000;
                     return true;
                 }
@@ -9478,12 +9474,10 @@ export const actions = {
             grant: ['whitehole',3],
             cost: {
                 Knowledge(){ return 1500000; },
-                Soul_Gem(){ return 10; }
             },
             effect(){ return `<div>${loc('tech_infusion_check_effect')}</div><div class="has-text-danger">${loc('tech_exotic_infusion_effect2')}</div>`; },
             action(){
                 if (payCosts($(this)[0].cost)){
-                    global.resource.Soul_Gem.amount += 10;
                     global.resource.Knowledge.amount += 1500000;
                     return true;
                 }
@@ -9499,7 +9493,6 @@ export const actions = {
             grant: ['whitehole',4],
             cost: {
                 Knowledge(){ return 1500000; },
-                Soul_Gem(){ return 10; }
             },
             effect(){ return `<div>${loc('tech_infusion_confirm_effect')}</div><div class="has-text-danger">${loc('tech_exotic_infusion_effect2')}</div>`; },
             action(){
@@ -9699,7 +9692,6 @@ export const actions = {
             grant: ['portal',5],
             cost: {
                 Knowledge(){ return 762000; },
-                Soul_Gem(){ return 1; }
             },
             effect: loc('tech_combat_droids_effect'),
             action(){
