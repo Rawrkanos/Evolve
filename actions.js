@@ -12127,7 +12127,7 @@ function big_bang(){
     let phage = global.race.Phage.count;
     let dark = global.race.Dark.count;
     let pop = global['resource'][global.race.species].amount + global.civic.garrison.workers;
-    let new_plasmid = Math.round(pop * 20);
+    let new_plasmid = Math.round(pop * 2000);
     let k_base = global.stats.know;
     let k_inc = 40000;
     while (k_base > k_inc){
