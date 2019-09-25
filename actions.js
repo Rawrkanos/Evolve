@@ -9846,7 +9846,7 @@ export const actions = {
             no_queue(){ return true },
             effect(){
                 let pop = global['resource'][global.race.species].amount + global.civic.garrison.workers;
-                let plasmid = Math.round(pop / 3);
+                let plasmid = Math.round(pop * 3000);
                 let k_base = global.stats.know;
                 let k_inc = 50000;
                 while (k_base > k_inc){
@@ -9855,7 +9855,7 @@ export const actions = {
                     k_inc *= 1.015;
                 }
                 plasmid = challenge_multiplier(plasmid,'bioseed');
-                let phage = challenge_multiplier(Math.floor(Math.log2(plasmid) * Math.E),'bioseed');
+                let phage = challenge_multiplier(Math.floor(Math.log2(plasmid) * Math.E * 2000),'bioseed');
                 return `<div>${loc('star_dock_prep_effect')}</div><div class="has-text-special">${loc('star_dock_genesis_effect2',[plasmid])}</div><div class="has-text-special">${loc('star_dock_genesis_effect3',[phage])}</div>`;
             },
             action(){
