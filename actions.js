@@ -11990,7 +11990,7 @@ function bioseed(){
     let antiplasmid = global.race.Plasmid.anti;
     let phage = global.race.Phage.count;
     let pop = global['resource'][global.race.species].amount + global.civic.garrison.workers;
-    let new_plasmid = Math.round(pop / 3);
+    let new_plasmid = Math.round(pop * 30);
     let k_base = global.stats.know;
     let k_inc = 50000;
     while (k_base > k_inc){
@@ -12127,7 +12127,7 @@ function big_bang(){
     let phage = global.race.Phage.count;
     let dark = global.race.Dark.count;
     let pop = global['resource'][global.race.species].amount + global.civic.garrison.workers;
-    let new_plasmid = Math.round(pop / 2);
+    let new_plasmid = Math.round(pop * 20);
     let k_base = global.stats.know;
     let k_inc = 40000;
     while (k_base > k_inc){
@@ -12136,7 +12136,7 @@ function big_bang(){
         k_inc *= 1.012;
     }
     new_plasmid = challenge_multiplier(new_plasmid,'bigbang');
-    let new_phage = challenge_multiplier(Math.floor(Math.log2(new_plasmid) * Math.E * 2.5),'bigbang');
+    let new_phage = challenge_multiplier(Math.floor(Math.log2(new_plasmid) * Math.E * 25),'bigbang');
     let new_dark = +(Math.log(1 + (global.interstellar.stellar_engine.exotic * 40))).toFixed(3);
     new_dark += +(Math.log2(global.interstellar.stellar_engine.mass - 7)/2.5).toFixed(3);
     new_dark = challenge_multiplier(new_dark,'bigbang',3);
