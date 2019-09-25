@@ -1626,7 +1626,7 @@ export const actions = {
             effect: loc('evo_challenge_plasmid_effect'),
             action(){
                 if (payCosts($(this)[0].cost)){
-                    global.race['no_plasmid'] = 1;
+                    global.race['no_plasmid'] = 0;
                     global.evolution['plasmid'] = { count: 1 };
                     removeAction(actions.evolution.plasmid.id);
                     drawAchieve();
@@ -1644,7 +1644,7 @@ export const actions = {
             effect: loc('evo_challenge_trade_effect'),
             action(){
                 if (payCosts($(this)[0].cost)){
-                    global.race['no_trade'] = 1;
+                    global.race['no_trade'] = 0;
                     global.evolution['trade'] = { count: 1 };
                     removeAction(actions.evolution.trade.id);
                     drawAchieve();
@@ -1662,7 +1662,7 @@ export const actions = {
             effect: loc('evo_challenge_craft_effect'),
             action(){
                 if (payCosts($(this)[0].cost)){
-                    global.race['no_craft'] = 1;
+                    global.race['no_craft'] = 0;
                     global.evolution['craft'] = { count: 1 };
                     removeAction(actions.evolution.craft.id);
                     drawAchieve();
@@ -1680,7 +1680,7 @@ export const actions = {
             effect: loc('evo_challenge_crispr_effect'),
             action(){
                 if (payCosts($(this)[0].cost)){
-                    global.race['no_crispr'] = 1;
+                    global.race['no_crispr'] = 0;
                     global.evolution['crispr'] = { count: 1 };
                     removeAction(actions.evolution.crispr.id);
                     drawAchieve();
@@ -1699,11 +1699,11 @@ export const actions = {
             action(){
                 if (payCosts(actions.evolution.junker.cost)){
                     global.race.species = 'junker';
-                    global.race['junker'] = 1;
-                    global.race['no_plasmid'] = 1;
-                    global.race['no_trade'] = 1;
-                    global.race['no_craft'] = 1;
-                    global.race['no_crispr'] = 1;
+                    global.race['junker'] = 0;
+                    global.race['no_plasmid'] = 0;
+                    global.race['no_trade'] = 0;
+                    global.race['no_craft'] = 0;
+                    global.race['no_crispr'] = 0;
                     sentience();
                 }
                 return false;
@@ -1720,7 +1720,7 @@ export const actions = {
             effect: loc('evo_challenge_joyless_effect'),
             action(){
                 if (payCosts(actions.evolution.joyless.cost)){
-                    global.race['joyless'] = 1;
+                    global.race['joyless'] = 0;
                     global.evolution['joyless'] = { count: 1 };
                     removeAction(actions.evolution.joyless.id);
                 }
@@ -1738,7 +1738,7 @@ export const actions = {
             effect: loc('evo_challenge_decay_effect'),
             action(){
                 if (payCosts(actions.evolution.decay.cost)){
-                    global.race['decay'] = 1;
+                    global.race['decay'] = 0;
                     global.evolution['decay'] = { count: 1 };
                     removeAction(actions.evolution.decay.id);
                 }
